@@ -142,7 +142,7 @@ h3 {
 }
 
 .experience-item + .experience-item {
-  padding-top: 1px;
+  padding-top: 5px;
 }
 
 .item-heading {
@@ -174,9 +174,17 @@ h3 {
 
 .detail-link {
   display: inline-block;
-  margin-top: 2px;
+  margin-top: 1px;
   font-size: 0.82rem;
+  font-weight: 550;
 }
+
+.detail-link span {
+  display: inline-block;
+  transition: transform 120ms ease;
+}
+
+.detail-link:hover span { transform: translateX(2px); }
 
 .note {
   margin: -13px 0 22px;
@@ -370,6 +378,55 @@ footer p { margin: 0; }
   font-size: 0.86rem;
 }
 
+.experience-pagination {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  margin-top: 60px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+}
+
+.experience-pagination a {
+  display: block;
+  text-decoration: none;
+}
+
+.experience-pagination a:last-child { text-align: right; }
+
+.experience-pagination small {
+  display: block;
+  margin-bottom: 2px;
+  color: var(--muted);
+  font-size: 0.7rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.experience-pagination strong {
+  color: var(--link);
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.not-found {
+  min-height: 75vh;
+  display: grid;
+  align-content: center;
+}
+
+.not-found .error-code {
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+}
+
+.not-found h1 { margin-bottom: 18px; }
+.not-found p { max-width: 510px; color: #444; }
+.not-found .home-link { display: inline-block; margin-top: 8px; }
+
 @media (max-width: 620px) {
   main {
     width: min(100% - 30px, 840px);
@@ -402,6 +459,8 @@ footer p { margin: 0; }
   .result-list { grid-template-columns: 1fr; }
   .result-list li { padding: 14px 0; }
   .result-list li + li { padding-left: 0; border-top: 1px solid var(--line); border-left: 0; }
+  .experience-pagination { gap: 18px; margin-top: 48px; }
+  .experience-pagination strong { font-size: 0.82rem; }
   footer { display: block; }
   footer p + p { margin-top: 2px; }
 }
@@ -409,6 +468,7 @@ footer p { margin: 0; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   a { transition: none; }
+  .detail-link span { transition: none; }
 }
 
 @media print {
