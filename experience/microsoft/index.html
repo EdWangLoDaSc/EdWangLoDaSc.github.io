@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Microsoft AI — Hanyang Wang 王汉扬</title>
+    <meta name="description" content="Hanyang Wang's work on Text2Grad, natural-language feedback, RLHF data, and multimodal alignment at Microsoft AI." />
+    <meta property="og:title" content="Microsoft AI — Hanyang Wang 王汉扬" />
+    <meta property="og:description" content="Foundation-model post-training with fine-grained natural-language feedback." />
+    <link rel="canonical" href="https://edwanglodasc.github.io/experience/microsoft/" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main class="detail-page">
+      <nav class="detail-nav"><a href="../../">← Hanyang Wang 王汉扬</a></nav>
+      <header class="detail-header">
+        <p class="company">Microsoft AI</p>
+        <h1>Foundation-Model Post-Training</h1>
+        <div class="detail-meta"><span>Jan. 2025 — Jun. 2025</span><span>RLHF · Natural-Language Feedback · Multimodal Alignment</span></div>
+        <p class="detail-summary">I explored how free-form critiques can become precise optimization signals, connecting interpretable natural-language feedback with parameter-level learning.</p>
+      </header>
+
+      <section class="detail-section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Selected work</h2>
+        <ul class="highlight-list">
+          <li><strong>Text2Grad</strong>Proposed and implemented a framework that aligns feedback phrases with erroneous token or reasoning spans, maps critiques to differentiable rewards, and propagates localized gradients instead of relying on a single sequence-level score.</li>
+          <li><strong>Multi-task RLHF data</strong>Designed a GPT-4o chain-of-thought Dual-Feedback pipeline across SLF5K, UltraFeedback, and KodCode. The pipeline generated critiques and span-level alignments for cross-task natural-language-gradient training.</li>
+          <li><strong>Vision-language alignment</strong>Fine-tuned Qwen2.5-VL-3B and 7B with LoRA and full-parameter training for region-level GUI understanding, extending fine-grained feedback from text-only tasks to multimodal settings.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="results-title">
+        <h2 id="results-title">Selected results</h2>
+        <ul class="result-list">
+          <li><strong>+25.3%</strong><span>BLEU over comparison methods</span></li>
+          <li><strong>22%</strong><span>faster convergence</span></li>
+          <li><strong>85–90%</strong><span>annotation cost reduction</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="related-title">
+        <h2 id="related-title">Related research</h2>
+        <div class="related-links">
+          <a href="https://proceedings.iclr.cc/paper_files/paper/2026/hash/52fbb930ec6941099f1384321d8b9461-Abstract-Conference.html" target="_blank" rel="noreferrer">Text2Grad [paper]</a>
+          <a href="https://arxiv.org/abs/2505.22338" target="_blank" rel="noreferrer">Text2Grad [arXiv]</a>
+          <a href="https://github.com/microsoft/Text2Grad" target="_blank" rel="noreferrer">Text2Grad [code]</a>
+        </div>
+      </section>
+
+      <footer><p>© 2026 Hanyang Wang 王汉扬</p><p><a href="../../">Back to homepage</a></p></footer>
+    </main>
+  </body>
+</html>

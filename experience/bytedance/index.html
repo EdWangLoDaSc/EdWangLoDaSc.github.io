@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>ByteDance · Doubao-Trae — Hanyang Wang 王汉扬</title>
+    <meta name="description" content="Hanyang Wang's work on automated evaluation, data strategy, and preference optimization for coding assistants at ByteDance." />
+    <meta property="og:title" content="ByteDance · Doubao-Trae — Hanyang Wang 王汉扬" />
+    <meta property="og:description" content="Evaluation, reverse distillation, and preference optimization for coding assistants." />
+    <link rel="canonical" href="https://edwanglodasc.github.io/experience/bytedance/" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main class="detail-page">
+      <nav class="detail-nav"><a href="../../">← Hanyang Wang 王汉扬</a></nav>
+      <header class="detail-header">
+        <p class="company">ByteDance · Doubao-Trae</p>
+        <h1>LLM Application Algorithms</h1>
+        <div class="detail-meta"><span>Sep. 2024 — Jan. 2025</span><span>Coding Agents · Evaluation · Preference Optimization</span></div>
+        <p class="detail-summary">I worked on the evaluation and training-data systems behind coding assistants, with a focus on traceable failure analysis and learning from difficult production cases.</p>
+      </header>
+
+      <section class="detail-section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Selected work</h2>
+        <ul class="highlight-list">
+          <li><strong>Automated evaluation benchmark</strong>Led a hybrid benchmark for Code-IDE that combined Claude-3.5 chain-of-thought reasoning and self-reflection to score readability, style conformance, and intent alignment across multiple candidate models.</li>
+          <li><strong>Structured reverse distillation</strong>Designed a multi-round self-correction pipeline for recurring production failures. It attributed syntax, logic, API misuse, and edge-case errors, then produced traceable error-type, repair-path, and reasoning-alignment labels.</li>
+          <li><strong>SFT and DPO data strategy</strong>Built a production-log training set centered on long context, cross-function calls, and boundary conditions. DPO negatives retained only one or two targeted boundary failures and enforced a meaningful test-accuracy gap.</li>
+          <li><strong>Step-level DPO</strong>Applied preference alignment at individual reasoning steps and used staged curriculum training to mitigate late-stage overconfidence collapse on difficult boundary cases.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="results-title">
+        <h2 id="results-title">Selected results</h2>
+        <ul class="result-list">
+          <li><strong>0.85+</strong><span>Spearman correlation with human rankings</span></li>
+          <li><strong>8–10</strong><span>candidate models evaluated in parallel</span></li>
+          <li><strong>Hours</strong><span>evaluation turnaround, reduced from days</span></li>
+        </ul>
+      </section>
+
+      <footer><p>© 2026 Hanyang Wang 王汉扬</p><p><a href="../../">Back to homepage</a></p></footer>
+    </main>
+  </body>
+</html>

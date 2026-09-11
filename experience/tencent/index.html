@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Tencent · CDG Advertising — Hanyang Wang 王汉扬</title>
+    <meta name="description" content="Hanyang Wang's work on reinforcement learning for large-scale recommendation and advertising at Tencent." />
+    <meta property="og:title" content="Tencent · CDG Advertising — Hanyang Wang 王汉扬" />
+    <meta property="og:description" content="Personalized multi-objective reinforcement learning for large-scale recommendation." />
+    <link rel="canonical" href="https://edwanglodasc.github.io/experience/tencent/" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main class="detail-page">
+      <nav class="detail-nav"><a href="../../">← Hanyang Wang 王汉扬</a></nav>
+      <header class="detail-header">
+        <p class="company">Tencent · CDG Advertising</p>
+        <h1>Reinforcement Learning for Recommendation</h1>
+        <div class="detail-meta"><span>Jun. 2025 — Sep. 2025</span><span>Recommendation · Multi-Objective RL · Production Systems</span></div>
+        <p class="detail-summary">I developed and shipped a reinforcement-learning system for personalized utility-weight tuning in WeChat Official Accounts and Channels advertising.</p>
+      </header>
+
+      <section class="detail-section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Selected work</h2>
+        <ul class="highlight-list">
+          <li><strong>DRL-PUT framework</strong>Formulated multi-objective utility-weight tuning as a deep-RL decision problem to reduce manual tuning cost and adapt to user heterogeneity and seasonal drift. Benchmarked DDPG and SAC before selecting REINFORCE for the sparse, high-variance reward setting.</li>
+          <li><strong>Personalized multi-objective reward</strong>Combined platform revenue with user-value signals including CTR, CTR30, and CVR. Campaign-specific weights supported click-through, conversion, and impression objectives, while historical CTR, CVR, and CPM informed personalized decisions.</li>
+          <li><strong>Offline-to-online production stack</strong>Combined continuous-action discretization with semantically related weight grouping, compressing the action space to roughly 10³ choices and meeting real-time inference requirements at more than 100 million monthly active users.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="results-title">
+        <h2 id="results-title">Online results</h2>
+        <ul class="result-list">
+          <li><strong>+9.7%</strong><span>CTR in a 25% traffic A/B test</span></li>
+          <li><strong>+7.7%</strong><span>CTR30 at billion-impression scale</span></li>
+          <li><strong>+1.26%</strong><span>CVR with no significant core-revenue regression</span></li>
+        </ul>
+      </section>
+
+      <footer><p>© 2026 Hanyang Wang 王汉扬</p><p><a href="../../">Back to homepage</a></p></footer>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Meituan · LongCat — Hanyang Wang 王汉扬</title>
+    <meta name="description" content="Hanyang Wang's work on agentic coding, on-policy distillation, hierarchical reinforcement learning, and data synthesis at Meituan LongCat." />
+    <meta property="og:title" content="Meituan · LongCat — Hanyang Wang 王汉扬" />
+    <meta property="og:description" content="Agentic coding, on-policy distillation, hierarchical RL, and executable data environments." />
+    <link rel="canonical" href="https://edwanglodasc.github.io/experience/meituan/" />
+    <link rel="stylesheet" href="../../styles.css" />
+  </head>
+  <body>
+    <main class="detail-page">
+      <nav class="detail-nav"><a href="../../">← Hanyang Wang 王汉扬</a></nav>
+      <header class="detail-header">
+        <p class="company">Meituan · LongCat</p>
+        <h1>Foundation-Model Agentic Coding</h1>
+        <div class="detail-meta"><span>Jun. 2026 — Present</span><span>Agentic RL · Post-Training · Data Synthesis</span></div>
+        <p class="detail-summary">I work on learning algorithms and executable environments for long-horizon coding agents, with an emphasis on better credit allocation, efficient search, and auditable training data.</p>
+      </header>
+
+      <section class="detail-section" aria-labelledby="highlights-title">
+        <h2 id="highlights-title">Selected work</h2>
+        <ul class="highlight-list">
+          <li><strong>DivOPD · Rollout-aware on-policy distillation</strong>Identified update-level credit-allocation failure in vanilla OPD, where a small number of long rollouts could dominate each learner batch. Designed a validate-cover-focus batch composer that filters invalid supervision, preserves trajectory coverage, and prioritizes turns with high learning need.</li>
+          <li><strong>HBR-GSPO · Hierarchical agentic reinforcement learning</strong>Designed a two-level denoised advantage estimator for Coordinator-SubAgent search. Candidate actions are replayed from the same state, retrieval noise is marginalized through resampling, and actions are compared with group-relative estimates. Paired finish/continue controls learn a stopping boundary without a hand-tuned length penalty.</li>
+          <li><strong>LongCat2.5 · Executable data synthesis</strong>Built Harbor-based task environments for SWE-SQL and OfficeQA-Pro. Developed an auditable pipeline spanning document sampling, K3 question generation and solving, independent validation, programmatic answer recomputation, and structured-rubric filtering.</li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="results-title">
+        <h2 id="results-title">Selected results</h2>
+        <ul class="result-list">
+          <li><strong>83.7%</strong><span>mean peak success rate with DivOPD</span></li>
+          <li><strong>1.78×</strong><span>average time-to-target speedup</span></li>
+          <li><strong>9K</strong><span>auditable agentic tasks created</span></li>
+        </ul>
+      </section>
+
+      <section class="detail-section" aria-labelledby="related-title">
+        <h2 id="related-title">Related research</h2>
+        <div class="related-links">
+          <span>DivOPD — under review</span>
+          <a href="https://arxiv.org/abs/2606.25556" target="_blank" rel="noreferrer">BiPACE [arXiv]</a>
+          <a href="https://github.com/TianxiangZhao/BiPACE" target="_blank" rel="noreferrer">BiPACE [code]</a>
+        </div>
+      </section>
+
+      <footer><p>© 2026 Hanyang Wang 王汉扬</p><p><a href="../../">Back to homepage</a></p></footer>
+    </main>
+  </body>
+</html>
